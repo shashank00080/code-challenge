@@ -50,7 +50,7 @@ class CompaniesController < ApplicationController
       :zip_code,
       :phone,
       :email,
-      :owner_id,
+      :owner_id
     )
   end
 
