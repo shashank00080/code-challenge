@@ -31,7 +31,15 @@ class CompaniesController < ApplicationController
       render :edit
     end
   end  
-
+  
+  def delete
+    if @company.destroy
+      redirect_to companies_path, notice: "Comapany deleted successfully"
+    else
+      redirect_to companies_path, notice: "Unable to delete the company"
+    end
+  end
+    
   private
 
   def company_params
